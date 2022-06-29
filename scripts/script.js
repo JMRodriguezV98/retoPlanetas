@@ -1,7 +1,7 @@
 let nombrePlanetas = Array('Tierra','Marte');
 let nombrePlanetasFor = Array('Tierra','Marte','Jupiter');
 let distancia = [5,3,'67'];
-const tamaño = [];
+const tamaño = [10,20,30];
 
 console.log(nombrePlanetas);
 console.log(distancia);
@@ -52,3 +52,24 @@ for( const key in distancia ){
         console.log('No se encontro la distancia');
     }
 }
+
+//ForEach
+console.log('-----------------------------');
+nombrePlanetasFor.forEach( (value,index,array) => {
+    console.log( 'planeta',index,value )
+})
+
+//Map
+console.log('-----------------------------');
+nombrePlanetasFor.map( (planetas,index) => {
+    return(
+        console.log(`El planeta ${planetas} tiene tamaño de :${tamaño[index]}`)
+    )
+})
+
+console.log('-----------------------------');
+let resultadoMap = nombrePlanetasFor.map( ( planetas,index ) => {
+    return( `El planeta ${planetas} tiene tamaño de: ${tamaño[index]}` )
+})
+
+console.log(resultadoMap);
